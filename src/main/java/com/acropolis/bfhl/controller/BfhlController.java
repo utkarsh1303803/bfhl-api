@@ -2,6 +2,7 @@ package com.acropolis.bfhl.controller;
 
 import com.acropolis.bfhl.dto.BfhlRequest;
 import com.acropolis.bfhl.dto.BfhlResponse;
+import com.acropolis.bfhl.dto.OperationCodeResponse;
 import com.acropolis.bfhl.service.BfhlService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +29,4 @@ public class BfhlController {
     public ResponseEntity<OperationCodeResponse> getOperationCode() {
         return ResponseEntity.ok(new OperationCodeResponse(200));
     }
-
-    // Simple response class for GET endpoint
-    private record OperationCodeResponse(int operation_code) {}
 }
