@@ -22,4 +22,13 @@ public class BfhlController {
         BfhlResponse response = bfhlService.processData(request.getData());
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<OperationCodeResponse> getOperationCode() {
+        return ResponseEntity.ok(new OperationCodeResponse(200));
+    }
+
+    // Simple response class for GET endpoint
+    private record OperationCodeResponse(int operation_code) {}
 }
