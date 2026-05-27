@@ -29,4 +29,10 @@ public class BfhlController {
     public ResponseEntity<OperationCodeResponse> getOperationCode() {
         return ResponseEntity.ok(new OperationCodeResponse(200));
     }
+
+    @GetMapping("/health")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<OperationCodeResponse> getHealth() {
+        return ResponseEntity.ok(new OperationCodeResponse(200));
+    }
 }
